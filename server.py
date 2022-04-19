@@ -18,3 +18,4 @@ with conn:
         if not data:
             print('no data')
             break
+        print(data.decode('utf-8'))
