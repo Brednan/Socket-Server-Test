@@ -1,4 +1,5 @@
 import socket
+import time
 
 HOST = "192.168.1.71"
 PORT = 65432
@@ -17,4 +18,5 @@ with conn:
         data = conn.recv(1024)
         if not data:
             print('no data')
+            time.sleep(5)
         print(data.decode('utf-8'))
