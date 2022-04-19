@@ -16,7 +16,4 @@ with conn:
     print(f"Connected by {addr}")
     while True:
         data = conn.recv(1024)
-        if not data:
-            print('no data')
-            time.sleep(5)
         print(data.decode('utf-8'))
