@@ -17,4 +17,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
             data = conn.recv(1024)
             if not data:
                 break
-            print(f'Message Received: {data}')
+            conn.sendall(data)
