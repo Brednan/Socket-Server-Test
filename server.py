@@ -16,4 +16,5 @@ with conn:
     print(f"Connected by {addr}")
     while True:
         data = conn.recv(1024)
-        print(data.decode('utf-8'))
+        if data:
+            print(data.decode('utf-8'))
