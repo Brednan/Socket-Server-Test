@@ -3,6 +3,8 @@ import socket
 HOST = "192.168.1.71"
 PORT = 65432
 
+print('hi')
+
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
 
@@ -15,4 +17,4 @@ with conn:
         data = conn.recv(1024)
         if not data:
             break
-        conn.sendall(data)
+        print(f'Message Received: {data}')
