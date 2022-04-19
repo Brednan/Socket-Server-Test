@@ -6,3 +6,4 @@ PORT = 65432
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
     client.connect((HOST, PORT))
     client.sendall('Hello Laptop')
+    data = client.recv(1024)
