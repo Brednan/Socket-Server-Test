@@ -3,7 +3,7 @@ import socket
 HOST = "192.168.1.71"
 PORT = 65432
 
-print('hi')
+print('Starting server...')
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
